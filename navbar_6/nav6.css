@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Montserrat";
+    background: rgb(88, 85, 83);
+    background: linear-gradient(90deg, rgba(88, 85, 83, 1) 12%, rgba(59, 57, 52, 1) 40%, rgba(31, 31, 29, 1) 84%);
+}
+
+nav {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+}
+
+label.logo {
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 0 100px;
+    line-height: 10vh;
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+nav ul li a {
+    color: aliceblue;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 10vh;
+}
+
+label.logo:hover {
+    color: red;
+    text-shadow: 0 0 25px red;
+    transition: all 0.3s;
+}
+
+a.active,
+a:hover {
+    color: #0082e6;
+    text-shadow: 0 0 25px #0082e6;
+    transition: all 0.3s;
+}
+
+.checkbtn {
+    color: aliceblue;
+    font-size: 35px;
+    float: right;
+    line-height: 10vh;
+    margin-right: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width:1096px) {
+    nav ul li {
+        padding: 0 30px;
+    }
+}
+
+@media(max-width:1000px) {
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 11vh;
+        left: 0;
+        clip-path: circle(1px at 100% 0);
+        transition: all 1s;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+    .checkbtn {
+        display: block;
+    }
+    #check:checked~ul {
+        clip-path: circle(1350px at 100% 0);
+    }
+}
